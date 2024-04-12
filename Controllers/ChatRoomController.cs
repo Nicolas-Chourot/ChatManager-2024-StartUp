@@ -11,6 +11,7 @@ namespace ChatManager.Controllers
         // GET: ChatRoom
         public ActionResult Index()
         {
+            Session["LastAction"] = "/ChatRoom/Index";
             return View();
         }
     }

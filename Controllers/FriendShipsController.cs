@@ -12,6 +12,7 @@ namespace MoviesDBManager.Controllers
     {
         public ActionResult Index()
         {
+            Session["LastAction"] = "FriendShips/index";
             return View();
         }
     }

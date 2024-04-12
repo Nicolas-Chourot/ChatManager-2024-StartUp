@@ -368,6 +368,7 @@ namespace ChatManager.Controllers
         [OnlineUsers.AdminAccess]
         public ActionResult LoginsJournal()
         {
+            Session["LastAction"] = "/Accounts/LoginsJournal";
             return View();
         }
         #endregion
@@ -377,6 +378,7 @@ namespace ChatManager.Controllers
             ViewBag.SelectedUsers = new List<int>();
             ViewBag.Users = DB.Users.SortedUsers();
             ViewBag.Status = status;
+            Session["LastAction"] = "/Accounts/GroupEmail";
             return View(new GroupEmail() { Message = "Bonjour [Nom]," });
         }
         [HttpPost]
@@ -477,6 +479,7 @@ namespace ChatManager.Controllers
         [OnlineUsers.AdminAccess]
         public ActionResult UsersList()
         {
+            Session["LastAction"] = "/Accounts/UsersList";
             return View();
         }
         [OnlineUsers.AdminAccess]
@@ -488,8 +491,6 @@ namespace ChatManager.Controllers
             }
             return null;
         }
-
-        
         #endregion
 
     }
