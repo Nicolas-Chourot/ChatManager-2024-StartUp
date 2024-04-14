@@ -70,7 +70,7 @@
 
   var defaults = {
     // default language
-    locale: "en",
+    locale: "fr",
     // show backdrop or not
     backdrop: true,
     // animate the modal in/out
@@ -78,7 +78,7 @@
     // additional class string applied to the top level dialog
     className: null,
     // whether or not to include a close button
-    closeButton: true,
+    closeButton: false,
     // show the dialog immediately by default
     show: true,
     // dialog container
@@ -807,7 +807,7 @@
     fr : {
       OK      : "OK",
       CANCEL  : "Annuler",
-      CONFIRM : "D'accord"
+      CONFIRM : "Confirmer"
     },
     he : {
       OK      : "אישור",
