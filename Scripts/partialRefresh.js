@@ -41,10 +41,10 @@ class PartialRefresh {
         $.ajax({
             url: url,
             method: 'GET',
-            success: () => {
+            success: (params) => {
                 this.refresh(true);
                 if (moreCallBack != null)
-                    moreCallBack();
+                    moreCallBack(params);
             }
         });
     }
